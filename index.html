@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77 News</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --secondary: #28a745;
+            --bg: #f4f7f6;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* Header with multi-layered background overlay */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('kedivim.uniwa.gr');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: 2px solid var(--secondary);
+            border-radius: 5px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: var(--secondary);
+        }
+
+        /* Main Content Layout */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Article Styling */
+        article {
+            background: white;
+            border-left: 8px solid var(--primary);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+        }
+
+        article img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        article a {
+            padding: 20px;
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            font-size: 1.1rem;
+            align-self: center;
+            line-height: 1.4;
+        }
+
+        article a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #fff;
+            text-align: center;
+            border-top: 3px solid var(--primary);
+        }
+
+        footer img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            main { grid-template-columns: 1fr; }
+            article { flex-direction: column; }
+            article img { width: 100%; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>77 News</h1>
+    <nav class="navigator">
+        <a href="#">Ελλάδα</a>
+        <a href="#">Κοινωνία</a>
+        <a href="#">Αθλητικά</a>
+        <a href="#">Πολιτικά</a>
+        <a href="#">Συνταγές</a>
+        <a href="#">Lifestyle</a>
+    </nav>
+</header>
+
+<main>
+    <!-- Primary News Section -->
+    <section>
+        <article>
+            <img src="https://www.noupou.gr/wp-content/uploads/2025/11/plimirismenoi-dromoi-poseidonos-4-1200x800.jpeg" alt="Flood">
+            <a href="flood/index.html">Πλημμύρες στα Νότια Προάστια. Εγκλωβισμοί και καταστροφές. Η απάντηση της Κυβέρνησης!</a>
+        </article>
+
+        <article>
+            <img src="https://www.zarpanews.gr/wp-content/uploads/2024/07/mykonos_navagos.webp" alt="Sea storm">
+            <a href="bf/imdex.html">Θαλασσοταραχή στο Αιγαίο Πέλαγος. Ακυρώθηκαν διαδρομές!</a>
+        </article>
+
+        <article>
+            <img src="https://www.ertnews.gr/wp-content/uploads/2025/11/6746281-768x576.jpg" alt="Landslide">
+            <a href="rd/index.html">Κατολισθήσεις σε ορεινό χωριό Ηπείρου. 7 Τραυματίες!</a>
+        </article>
+    </section>
+
+    <!-- Secondary News/Sidebar Section -->
+    <section>
+        <article>
+            <img src="https://www.newsbeast.gr/image/s1536x976/fill/webp/file/files/1/2026/01/agrotes001.jpg?gravity=center" alt="Farmers">
+            <a href="https://www.newsbeast.gr/greece/arthro/12818098/kavgas-metaxy-agroton-se-zontani-metadosi-les-ilithiotites-echoume-xeftilistei">Καβγάς μεταξύ αγροτών σε ζωντανή μετάδοση: «Λες ηλιθιότητες, έχουμε ξεφτιλιστεί»</a>
+        </article>
+
+        <article>
+            <img src="https://www.newsbeast.gr/image/s1382x878/fill/webp/file/files/1/2025/11/3-12.jpg?gravity=center" alt="Russia War News">
+            <a href="https://www.newsbeast.gr/world/arthro/12817569/an-kapoios-pethanei-ton-vazoun-se-mia-sakoula-kai-ton-petoun-pos-mia-gynaika-exapatise-dekades-xenous-kai-tous-esteile-sto-rosiko-metopo">«Αν κάποιος πεθάνει, τον βάζουν σε μια σακούλα και τον πετούν» – Πώς μια γυναίκα εξαπάτησε δεκάδες ξένους</a>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <img src="https://blogs.sch.gr/77dimath/files/2019/02/%CE%A3%CE%A7%CE%9F%CE%9B%CE%95%CE%99%CE%9F-2.jpg" alt="School Logo"/>
+    <p>&copy; 2026 77 News - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
